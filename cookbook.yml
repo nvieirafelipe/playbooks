@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Get a list of installed packages to avoid duplications
+      command: pacman -Qq
+      register: installed
+      changed_when: false
+
+    - include: tasks/dot-files.yml user=nvieirafelipe

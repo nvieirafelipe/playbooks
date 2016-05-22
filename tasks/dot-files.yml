@@ -1,0 +1,17 @@
+---
+- name: Clone dotfiles for {{ user }}
+  git:
+    repo: git@github.com:nvieirafelipe/dot-files.git
+    dest: ~{{ user }}/Developer/dot-files
+    accept_hostkey: yes
+    update: yes
+
+- name: Create symlinks
+  become: yes
+  become_method: su
+  file:
+    src: ~{{ user }}/Developer/dot-files/byzanz-window
+    dest: "/usr/bin/byzanz-window"
+    owner: root
+    group: root
+    state: link
