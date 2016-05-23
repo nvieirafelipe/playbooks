@@ -1,5 +1,5 @@
 ---
-- name: Clone dotfiles for {{ user }}
+- name: Clone dot-files for {{ user }}
   git:
     repo: git@github.com:nvieirafelipe/dot-files.git
     dest: ~{{ user }}/Developer/dot-files
@@ -10,8 +10,7 @@
   become: yes
   become_method: su
   file:
-    src: ~{{ user }}/Developer/dot-files/byzanz-window
-    dest: "/usr/bin/byzanz-window"
-    owner: root
-    group: root
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     state: link
+  with_items: "{{ symlinks }}"

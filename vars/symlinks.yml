@@ -1,0 +1,13 @@
+symlinks:
+  - src: ~{{ user }}/Developer/dot-files/byzanz-window
+    dest: /usr/bin/byzanz-window
+  - src: ~{{ user }}/Developer/dot-files/.gitconfig
+    dest: ~{{ user }}/.gitconfig
+  - src: ~{{ user }}/Developer/dot-files/.gitignore
+    dest: ~{{ user }}/.gitignore
+  - src: ~{{ user }}/Developer/dot-files/.vimrc
+    dest: ~{{ user }}/.vimrc
+  - src: ~{{ user }}/Developer/dot-files/.zshrc
+    dest: ~{{ user }}/.zshrc
+  - src: ~{{ user }}/Developer/dot-files/nvieirafelipe.zsh-theme
+    dest: ~{{ user }}/.oh-my-zsh/themes/nvieirafelipe.zsh-theme

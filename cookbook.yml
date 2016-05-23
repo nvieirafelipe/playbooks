@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   connection: local
+  vars_files:
+    - ./vars/symlinks.yml
 
   tasks:
     - name: Get a list of installed packages to avoid duplications
