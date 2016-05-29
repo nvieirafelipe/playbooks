@@ -1,0 +1,10 @@
+apps:
+  - name: dropbox
+  - name: firefox-nightly
+  - name: gnome-shell-extension-dash-to-dock
+  - name: gnome-shell-system-monitor-applet-git
+  - name: google-chrome
+  - name: icedtea-web
+  - name: ntfs-3g
+  - name: plex-media-server
+  - name: telegram-desktop-bin

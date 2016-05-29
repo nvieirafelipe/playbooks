@@ -12,7 +12,7 @@ localhost ansible_connection=local
 ## Run
 
 ```
-ansible-playbook cookbook.yml --ask-become-pass
+ansible-playbook cookbook.yml --ask-become-pass --extra-vars="user=nvieirafelipe"
 ```
 
 ## Reference

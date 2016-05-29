@@ -1,13 +1,12 @@
 ---
-- name: Clone dot-files for {{ user }}
+- name: "dot-files: Clone project for {{ user }}"
   git:
     repo: git@github.com:nvieirafelipe/dot-files.git
     dest: ~{{ user }}/Developer/dot-files
     accept_hostkey: yes
-    update: yes
 
-- name: Create symlinks
-  become: yes
+- name: "dot-files: Create symlinks"
+  become: true
   become_method: su
   file:
     src: "{{ item.src }}"
