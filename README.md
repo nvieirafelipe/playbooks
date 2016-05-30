@@ -2,16 +2,15 @@
 
 ## Dependencies
 
-  ansible
+    ansible
 
 ## Installation
 
+    git clone git@github.com:nvieirafelipe/playbooks.git
 
 ## Run
 
-```
-ansible-playbook playbooks.yml --ask-become-pass --extra-vars="user=usename"
-```
+    ansible-playbook playbooks.yml --ask-become-pass --extra-vars="user=usename"
 
 ## Reference
 
