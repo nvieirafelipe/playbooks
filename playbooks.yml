@@ -6,6 +6,7 @@
     - ./vars/dev.yml
     - ./vars/gnome_shell_extensions.yml
     - ./vars/symlinks.yml
+    - ./vars/work.yml
 
   tasks:
     - name: "Install gnome shell extensions"
