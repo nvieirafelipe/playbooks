@@ -1,13 +1,13 @@
 symlinks:
-  - src: ~{{ user }}/Developer/dot-files/byzanz-window
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/byzanz-window
     dest: /usr/bin/byzanz-window
-  - src: ~{{ user }}/Developer/dot-files/.gitconfig
-    dest: ~{{ user }}/.gitconfig
-  - src: ~{{ user }}/Developer/dot-files/.gitignore
-    dest: ~{{ user }}/.gitignore
-  - src: ~{{ user }}/Developer/dot-files/.vimrc
-    dest: ~{{ user }}/.vimrc
-  - src: ~{{ user }}/Developer/dot-files/.zshrc
-    dest: ~{{ user }}/.zshrc
-  - src: ~{{ user }}/Developer/dot-files/nvieirafelipe.zsh-theme
-    dest: ~{{ user }}/.oh-my-zsh/themes/nvieirafelipe.zsh-theme
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.gitconfig
+    dest: ~{{ ansible_user_id }}/.gitconfig
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.gitignore
+    dest: ~{{ ansible_user_id }}/.gitignore
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
+    dest: ~{{ ansible_user_id }}/.vimrc
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.zshrc
+    dest: ~{{ ansible_user_id }}/.zshrc
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/nvieirafelipe.zsh-theme
+    dest: ~{{ ansible_user_id }}/.oh-my-zsh/themes/nvieirafelipe.zsh-theme

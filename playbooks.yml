@@ -41,7 +41,7 @@
         state: present
       with_items: "{{ work }}"
 
-    - name: Set zsh for {{ user }}
-      user: name={{ user }} shell=/bin/zsh
+    - name: Set zsh for {{ ansible_user_id }}
+      user: name={{ ansible_user_id }} shell=/bin/zsh
 
     - include: tasks/dot-files.yml

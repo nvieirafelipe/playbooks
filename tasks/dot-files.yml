@@ -1,8 +1,8 @@
 ---
-- name: "dot-files: Clone project for {{ user }}"
+- name: "dot-files: Clone project for {{ ansible_user_id }}"
   git:
     repo: git@github.com:nvieirafelipe/dot-files.git
-    dest: ~{{ user }}/Developer/dot-files
+    dest: ~{{ ansible_user_id }}/Developer/dot-files
     accept_hostkey: yes
 
 - name: "dot-files: Create symlinks"

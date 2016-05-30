@@ -10,7 +10,7 @@
 
 ## Run
 
-    ansible-playbook playbooks.yml --ask-become-pass --extra-vars="user=usename"
+    ansible-playbook playbooks.yml --ask-become-pass
 
 ## Reference
 
