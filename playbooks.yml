@@ -2,11 +2,19 @@
 - hosts: localhost
   connection: local
   vars_files:
-    - ./vars/symlinks.yml
     - ./vars/apps.yml
     - ./vars/dev.yml
+    - ./vars/gnome_shell_extensions.yml
+    - ./vars/symlinks.yml
 
   tasks:
+    - name: "Install gnome shell extensions"
+      shell_extension:
+        uri: "{{ item.uri }}"
+        name: "{{ item.name }}"
+        state: enabled
+      with_items: "{{ gnome_shell_extensions }}"
+
     - name: "Install apps"
       become: true
       become_method: su
@@ -24,11 +32,13 @@
       with_items: "{{ dev }}"
 
 
-    - name: "locaweb: Install fortclient"
+    - name: "Install work apps"
       become: true
       become_method: su
-      pacman: name=forticlientsslvpn state=present
-
+      pacman:
+        name: "{{ item.name }}"
+        state: present
+      with_items: "{{ work }}"
 
     - name: Set zsh for {{ user }}
       user: name={{ user }} shell=/bin/zsh
