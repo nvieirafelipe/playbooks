@@ -1,10 +1,14 @@
 apps:
+  - name: bower
   - name: dropbox
-  - name: firefox-nightly
-  - name: gnome-shell-extension-dash-to-dock
-  - name: gnome-shell-system-monitor-applet-git
-  - name: google-chrome
+  - name: elixir
+  - name: firefox
+  - name: git
   - name: icedtea-web
+  - name: imagemagick
+  - name: nodejs
+  - name: npm
   - name: ntfs-3g
-  - name: plex-media-server
-  - name: telegram-desktop-bin
+  - name: redis
+  - name: vim
+  - name: zsh

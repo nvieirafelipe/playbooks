@@ -1,0 +1,13 @@
+---
+- include_vars: aur_apps.yml
+
+- name: "Check for aur apps"
+  shell: pacman -Q {{ item.name }}
+  register: aur_apps_to_install
+  with_items: "{{ aur_apps }}"
+  changed_when: false
+  failed_when: false
+
+- include: tasks/download_and_build_aur_apps.yml package={{ item.item.name }}
+  when: item.rc != 0
+  with_items: "{{ aur_apps_to_install.results }}"

@@ -1,59 +1,16 @@
 ---
 - hosts: localhost
   connection: local
-  vars_files:
-    - ./vars/apps.yml
-    - ./vars/aur_apps.yml
-    - ./vars/dev.yml
-    - ./vars/gnome_shell_extensions.yml
-    - ./vars/symlinks.yml
-    - ./vars/work.yml
 
   tasks:
-    - name: "Install gnome shell extensions"
-      shell_extension:
-        uri: "{{ item.uri }}"
-        name: "{{ item.name }}"
-        state: enabled
-      with_items: "{{ gnome_shell_extensions }}"
+    - include: tasks/gnome_shell_extensions.yml
 
-    - name: "Install apps"
-      become: true
-      become_method: su
-      pacman:
-        name: "{{ item.name }}"
-        state: present
-      with_items: "{{ apps }}"
+    - include: tasks/install_apps.yml
 
-    - name: "Check for aur apps"
-      shell: pacman -Q {{ item.name }}
-      register: aur_apps_to_install
-      with_items: "{{ aur_apps }}"
-      changed_when: false
-      failed_when: false
+    - include: tasks/install_aur_apps.yml
 
-    - include: tasks/install_aur.yml package={{ item.item.name }}
-      when: item.rc != 0
-      with_items: "{{ aur_apps_to_install.results }}"
-
-    - name: "Install dev apps"
-      become: true
-      become_method: su
-      pacman:
-        name: "{{ item.name }}"
-        state: present
-      with_items: "{{ dev }}"
-
-
-    - name: "Install work apps"
-      become: true
-      become_method: su
-      pacman:
-        name: "{{ item.name }}"
-        state: present
-      with_items: "{{ work }}"
-
-    - name: Set zsh for {{ ansible_user_id }}
+    - name: "Set zsh for {{ ansible_user_id }}"
       user: name={{ ansible_user_id }} shell=/bin/zsh
 
-    - include: tasks/dot-files.yml
+    - include: tasks/dot_files.yml
+

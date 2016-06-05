@@ -1,6 +1,6 @@
 ---
 
-- name: "Download package {{ package }} snapshot"
+- name: "Download {{ package }}"
   get_url:
     url: https://aur.archlinux.org/cgit/aur.git/snapshot/{{ package }}.tar.gz
     dest: /tmp
@@ -11,5 +11,5 @@
     dest: /tmp/
     copy: no
 
-- name: "Build and install {{ package }}"
+- name: "Build {{ package }}"
   shell: cd /tmp/{{ package }} && makepkg -s -i --noconfirm

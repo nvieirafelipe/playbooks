@@ -1,4 +1,6 @@
 ---
+- include_vars: symlinks.yml
+
 - name: "dot-files: Clone project for {{ ansible_user_id }}"
   git:
     repo: git@github.com:nvieirafelipe/dot-files.git

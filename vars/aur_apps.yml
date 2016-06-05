@@ -1,2 +1,12 @@
 aur_apps:
+  - name: byzanz-git
+  - name: direnv
+  - name: firefox-nightly
+  - name: forticlientsslvpn
   - name: franz
+  - name: gnome-terminal-transparency
+  - name: google-chrome
+  - name: heroku-toolbelt
+  - name: oh-my-zsh-git
+  - name: plex-media-server
+  - name: tmate
