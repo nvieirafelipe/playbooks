@@ -14,3 +14,7 @@
 
     - include: tasks/dot_files.yml
 
+    - name: "Copy ssh config"
+      template:
+        src: files/config
+        dest: ~{{ ansible_user_id }}/.ssh/config

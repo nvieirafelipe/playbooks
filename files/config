@@ -1,0 +1,4 @@
+Host gateway
+  HostName nibbler0001.locaweb.com.br
+  IdentityFile ~/.ssh/gateway
+  User _fvieira
