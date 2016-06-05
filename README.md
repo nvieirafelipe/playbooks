@@ -3,6 +3,7 @@
 ## Dependencies
 
     ansible
+    rvm_io.rvm1-ruby (*)
 
 ## Installation
 
@@ -25,3 +26,7 @@
 [jtyr/ansible-archlinux_aur](https://github.com/jtyr/ansible-archlinux_aur)
 
 [rvm1-ansible](https://github.com/rvm/rvm1-ansible)
+
+---
+
+__(*) To install rvm1-ruby run `ansible-galaxy install rvm_io.rvm1-ruby`__

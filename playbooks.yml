@@ -1,6 +1,11 @@
 ---
 - hosts: localhost
   connection: local
+  vars_files:
+    - ./vars/rvm.yml
+
+  roles:
+    - { role: rvm_io.rvm1-ruby, tags: ruby, sudo: True }
 
   tasks:
     - include: tasks/gnome_shell_extensions.yml
