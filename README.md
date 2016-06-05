@@ -22,4 +22,6 @@
 
 [eddyhub/ansible-gnome_shell](https://github.com/eddyhub/ansible-gnome_shell)
 
+[jtyr/ansible-archlinux_aur](https://github.com/jtyr/ansible-archlinux_aur)
+
 [rvm1-ansible](https://github.com/rvm/rvm1-ansible)
