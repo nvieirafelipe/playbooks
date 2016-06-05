@@ -10,5 +10,6 @@ apps:
   - name: npm
   - name: ntfs-3g
   - name: redis
+  - name: the_silver_searcher
   - name: vim
   - name: zsh
