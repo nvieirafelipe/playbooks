@@ -5,6 +5,8 @@ symlinks:
     dest: ~{{ ansible_user_id }}/.gitconfig
   - src: ~{{ ansible_user_id }}/Developer/dot-files/.gitignore
     dest: ~{{ ansible_user_id }}/.gitignore
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.tmux.conf
+    dest: ~{{ ansible_user_id }}/.tmux.conf
   - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
     dest: ~{{ ansible_user_id }}/.vimrc
   - src: ~{{ ansible_user_id }}/Developer/dot-files/.zshrc

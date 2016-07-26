@@ -1,7 +1,6 @@
 aur_apps:
   - name: byzanz-git
   - name: direnv
-  - name: firefox-nightly
   - name: forticlientsslvpn
   - name: franz
   - name: gnome-terminal-transparency

@@ -1,6 +1,8 @@
 apps:
   - name: bower
   - name: dropbox
+  - name: docker
+  - name: docker-compose
   - name: elixir
   - name: firefox
   - name: git
@@ -11,5 +13,6 @@ apps:
   - name: ntfs-3g
   - name: redis
   - name: the_silver_searcher
+  - name: tmux
   - name: vim
   - name: zsh
