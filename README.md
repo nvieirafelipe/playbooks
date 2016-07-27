@@ -11,7 +11,7 @@
 
 ## Run
 
-    ansible-playbook playbooks.yml --ask-become-pass
+    bin/play
 
 ## Reference
 

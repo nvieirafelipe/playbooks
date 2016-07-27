@@ -10,8 +10,10 @@ symlinks:
   - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
     dest: ~{{ ansible_user_id }}/.vimrc
   - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
-    dest: ~{{ ansible_user_id }}/.vimrc
-  - src: ~{{ ansible_user_id }}/.config/nvim/init.vim
+    dest: ~{{ ansible_user_id }}/.config/nvim/init.vim
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.zshrc
     dest: ~{{ ansible_user_id }}/.zshrc
   - src: ~{{ ansible_user_id }}/Developer/dot-files/nvieirafelipe.zsh-theme
-    dest: ~{{ ansible_user_id }}/.oh-my-zsh/themes/nvieirafelipe.zsh-theme
+    dest: /usr/share/oh-my-zsh/themes/nvieirafelipe.zsh-theme
+  - src: /usr/share/oh-my-zsh
+    dest: ~{{ ansible_user_id }}/.oh-my-zsh

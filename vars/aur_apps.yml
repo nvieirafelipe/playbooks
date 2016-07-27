@@ -7,7 +7,7 @@ aur_apps:
   - name: google-chrome
   - name: heroku-toolbelt
   - name: oh-my-zsh-git
-  - name: python-powerline-git
+  - name: powerline-fonts-git
   - name: plex-media-server
   - name: tmate
   - name: vundle-git

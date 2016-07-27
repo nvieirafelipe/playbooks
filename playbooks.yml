@@ -15,6 +15,8 @@
     - include: tasks/install_aur_apps.yml
 
     - name: "Set zsh for {{ ansible_user_id }}"
+      become: true
+      become_method: su
       user: name={{ ansible_user_id }} shell=/bin/zsh
 
     - include: tasks/dot_files.yml
@@ -28,3 +30,9 @@
       template:
         src: files/config
         dest: ~{{ ansible_user_id }}/.ssh/config
+
+    - name: "Install vundle plugins"
+      shell: vim +PluginInstall +qall
+
+    - name: "Install tmux plugins"
+      shell: ~{{ ansible_user_id }}/.tmux/plugins/tpm/scripts/install_plugins.sh
