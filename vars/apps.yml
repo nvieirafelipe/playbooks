@@ -8,6 +8,7 @@ apps:
   - name: git
   - name: icedtea-web
   - name: imagemagick
+  - name: neovim
   - name: nodejs
   - name: npm
   - name: ntfs-3g
