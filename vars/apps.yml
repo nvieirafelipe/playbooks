@@ -8,12 +8,19 @@ apps:
   - name: git
   - name: icedtea-web
   - name: imagemagick
+  - name: lshw
   - name: neovim
   - name: nodejs
   - name: npm
   - name: ntfs-3g
+  - name: phantomjs
+  - name: postgresql
+  - name: rabbitmq
   - name: redis
+  - name: ripgrep
+  - name: sushi
   - name: the_silver_searcher
   - name: tmux
+  - name: tree
   - name: vim
   - name: zsh
