@@ -29,4 +29,4 @@
 
 ---
 
-__(*) To install rvm1-ruby run `ansible-galaxy install rvm_io.rvm1-ruby`__
+__(*) To install rvm1-ruby run `ansible-galaxy install rvm_io.ruby`__
