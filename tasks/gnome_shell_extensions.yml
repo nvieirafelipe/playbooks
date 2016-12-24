@@ -1,6 +1,4 @@
 ---
-- include_vars: gnome_shell_extensions.yml
-
 - name: "Install gnome shell extensions"
   shell_extension:
     uri: "{{ item.uri }}"

@@ -1,6 +1,4 @@
 ---
-- include_vars: apps.yml
-
 - name: "Install apps"
   become: true
   become_method: su

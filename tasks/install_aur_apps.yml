@@ -1,6 +1,4 @@
 ---
-- include_vars: aur_apps.yml
-
 - name: "Check for aur apps"
   shell: pacman -Q {{ item.name }}
   register: aur_apps_to_install
