@@ -1,6 +1,9 @@
 ---
 - hosts: localhost
   connection: local
+  roles:
+    - { role: osx, when: "ansible_distribution == 'MacOSX'" }
+
   vars_files:
     - ./vars/rvm.yml
     - ./vars/gnome_shell_extensions.yml
