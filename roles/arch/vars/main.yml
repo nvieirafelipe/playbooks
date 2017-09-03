@@ -1,0 +1,85 @@
+---
+
+rvm1_user: "{{ ansible_user_id }}"
+rvm1_install_flags: "--auto-dotfiles --user-install"
+rvm1_install_path: "/home/{{ ansible_user_id }}/.rvm"
+rvm1_rubies:
+  - 'ruby-2.3.1'
+  - 'ruby-2.3.0'
+  - 'ruby-2.2.4'
+
+gnome_shell_extensions:
+  - name: "clipboard-indicator@tudmotu.com"
+    uri: "git@github.com:Tudmotu/gnome-shell-extension-clipboard-indicator.git"
+  - name: "dash-to-dock@micxgx.gmail.com"
+    uri: "git@github.com:micheleg/dash-to-dock.git"
+  - name: "dynamic-panel-transparency@rockon999.github.io"
+    uri: "git@github.com:rockon999/dynamic-panel-transparency.git"
+  - name: "services-panel@bit-else.com"
+    uri: "git@github.com:bjesus/services-panel.git"
+  - name: "system-monitor@paradoxxx.zero.gmail.com"
+    uri: "git@github.com:paradoxxxzero/gnome-shell-system-monitor-applet.git"
+  - name: "Random_Walls@Antares"
+    uri: "git@github.com:rodakorn/randwall.git"
+  - name: "TopIcons@phocean.net"
+    uri: "git@github.com:phocean/TopIcons-plus.git"
+
+apps:
+  - name: bower
+  - name: dropbox
+  - name: docker
+  - name: docker-compose
+  - name: firefox
+  - name: git
+  - name: icedtea-web
+  - name: imagemagick
+  - name: lshw
+  - name: neovim
+  - name: npm
+  - name: ntfs-3g
+  - name: phantomjs
+  - name: postgresql
+  - name: rabbitmq
+  - name: redis
+  - name: ripgrep
+  - name: sushi
+  - name: the_silver_searcher
+  - name: tmux
+  - name: tree
+  - name: vim
+  - name: xclip
+  - name: zsh
+
+aur_apps:
+  - name: byzanz-git
+  - name: direnv
+  - name: forticlientsslvpn
+  - name: gnome-terminal-transparency
+  - name: google-chrome
+  - name: heroku-toolbelt
+  - name: oh-my-zsh-git
+  - name: powerline-fonts-git
+  - name: plex-media-server
+  - name: tmate
+  - name: vundle-git
+  - name: zoom
+
+symlinks:
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/byzanz-window
+    dest: /usr/bin/byzanz-window
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.gitconfig
+    dest: ~{{ ansible_user_id }}/.gitconfig
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.gitignore
+    dest: ~{{ ansible_user_id }}/.gitignore
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.tmux.conf
+    dest: ~{{ ansible_user_id }}/.tmux.conf
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
+    dest: ~{{ ansible_user_id }}/.vimrc
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.vimrc
+    dest: ~{{ ansible_user_id }}/.config/nvim/init.vim
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/.zshrc
+    dest: ~{{ ansible_user_id }}/.zshrc
+  - src: ~{{ ansible_user_id }}/Developer/dot-files/nvieirafelipe.zsh-theme
+    dest: /usr/share/oh-my-zsh/themes/nvieirafelipe.zsh-theme
+  - src: /usr/share/oh-my-zsh
+    dest: ~{{ ansible_user_id }}/.oh-my-zsh

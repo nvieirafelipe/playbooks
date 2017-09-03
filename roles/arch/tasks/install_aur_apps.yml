@@ -6,6 +6,6 @@
   changed_when: false
   failed_when: false
 
-- include: tasks/download_and_build_aur_apps.yml package={{ item.item.name }}
+- include: download_and_build_aur_apps.yml package={{ item.item.name }}
   when: item.rc != 0
   with_items: "{{ aur_apps_to_install.results }}"
