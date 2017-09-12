@@ -1,0 +1,36 @@
+---
+
+homebrew_taps:
+  - caskroom/cask
+
+homebrew_installed_packages:
+  - direnv
+  - fortune
+  - fzf
+  - git
+  - imagemagick
+  - neovim
+  - openssl
+  - postgresql
+  - rabbitmq
+  - redis
+  - sqlite
+  - tmux
+  - tree
+
+homebrew_cask_apps:
+  - docker
+  - dropbox
+  - font-hack-nerd-font
+  - font-inconsolata-dz-for-powerline
+  - font-meslo-for-powerline
+  - google-chrome
+  - google-chrome-canary
+  - iterm2
+  - macdown
+  - pgadmin4
+  - smcfancontrol
+  - spectacle
+  - spotify
+  - sublime-text
+  - yujitach-menumeters

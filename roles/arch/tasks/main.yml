@@ -1,4 +1,7 @@
 ---
+- include_role:
+    name: rvm_io.ruby
+
 - include: gnome_shell_extensions.yml
 
 - include: install_apps.yml

@@ -4,6 +4,7 @@
 
     ansible
     rvm_io.rvm1-ruby (*)
+    v0rts.homebrew (**)
 
 ## Installation
 
@@ -30,3 +31,4 @@
 ---
 
 __(*) To install rvm1-ruby run `ansible-galaxy install rvm_io.ruby`__
+__(**)To instal v0rts.homebrew run `ansible-galaxy install v0rts.homebrew`__
