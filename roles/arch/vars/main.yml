@@ -25,41 +25,48 @@ gnome_shell_extensions:
     uri: "git@github.com:phocean/TopIcons-plus.git"
 
 apps:
-  - name: bower
-  - name: dropbox
+  - name: awesome-treminal-fonts
   - name: docker
   - name: docker-compose
+  - name: dropbox
   - name: firefox
+  - name: firefox-developer-edition
+  - name: fzf
   - name: git
+  - name: gitkraken
   - name: icedtea-web
   - name: imagemagick
   - name: lshw
+  - name: meld
   - name: neovim
-  - name: npm
   - name: ntfs-3g
-  - name: phantomjs
-  - name: postgresql
-  - name: rabbitmq
-  - name: redis
+  - name: peek
   - name: ripgrep
   - name: sushi
-  - name: the_silver_searcher
+  - name: tilix
   - name: tmux
   - name: tree
-  - name: vim
   - name: xclip
   - name: zsh
+  - name: zsh-theme-powerlevel9k
 
 aur_apps:
+  - name: atom
   - name: byzanz-git
   - name: direnv
-  - name: forticlientsslvpn
-  - name: gnome-terminal-transparency
+  - name: gesture-manager-git
+  - name: gnome-appfolders-manager
   - name: google-chrome
   - name: heroku-toolbelt
+  - name: libinput-gestures
+  - name: medis
+  - name: neovim-plug
+  - name: networkmanager-fortisslvpn-git
   - name: oh-my-zsh-git
-  - name: powerline-fonts-git
+  - name: pgadmin4
   - name: plex-media-server
+  - name: powerline-fonts-git
+  - name: prezto-git
   - name: tmate
   - name: vundle-git
   - name: zoom
